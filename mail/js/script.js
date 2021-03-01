@@ -6,12 +6,14 @@ var emailValida;
 
 for ( var i = 0; i < email.length; i++ ){
   if ( utente == email[i] ) {
-    emailValida = utente;
+    utente = emailValida;
   }
 }
 
 if ( emailValida = utente ){
+  console.log("email valida");
   document.getElementById('lista').innerHTML = emailValida + " questo indirizzo email è in lista";
-} else{
-  document.getElementById('lista').innerHTML = emailValida + " questo indirizzo email NON è in lista";
+} else {
+  console.log("email non valida");
+  document.getElementById('lista').innerHTML = "Questo indirizzo email NON è in lista";
 }
