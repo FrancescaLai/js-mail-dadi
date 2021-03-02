@@ -10,7 +10,7 @@ for ( var i = 0; i < email.length; i++ ){
   }
 }
 
-if ( emailValida = utente ){
+if ( emailValida == utente ){
   console.log("email valida");
   document.getElementById('lista').innerHTML = emailValida + " questo indirizzo email è in lista";
 } else {
