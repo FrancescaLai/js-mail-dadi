@@ -20,4 +20,6 @@ if (giocatore1 > giocatorePc){
   document.getElementById("vincitore").innerHTML = "Hai vinto"
 } else if (giocatore1 < giocatorePc){
   document.getElementById("vincitore").innerHTML = "Hai perso"
+} else {
+  document.getElementById("vincitore").innerHTML = "Pareggio"
 }

@@ -6,7 +6,9 @@ var emailValida;
 
 for ( var i = 0; i < email.length; i++ ){
   if ( utente == email[i] ) {
-    utente = emailValida;
+    //attenzione che se scrivo utente = emailValida gli dico che utente è uguale a Undefined perchè la var emailValida non è definita.
+    //l'ordine è importante, si legge sempre da sinistra a destra 
+    emailValida = utente;
   }
 }
 
