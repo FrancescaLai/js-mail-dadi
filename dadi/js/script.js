@@ -1,25 +1,25 @@
-// Generatore numeri random
+// Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-// Così tira numeri da 0 a 6
-// var giocatore1 = Math.floor(Math.random() * 7);
-// console.log(giocatore1);
 
-// var giocatorePc = Math.floor(Math.random() * 7);
-// console.log(giocatorePc);
+// 1. Genero numeri random
+var numeroUtente = Math.floor(Math.random() * 6) + 1;
+var numeroPc = Math.floor(Math.random() * 6) + 1;
+// Così tira numeri da 0 a 6 -> var giocatore = Math.floor(Math.random() * 7);
 
-// Così tira numeri da 1 a 6
-var giocatore1 = Math.floor(Math.random() * 6) + 1;
-console.log(giocatore1);
 
-var giocatorePc = Math.floor(Math.random() * 6) + 1;
-console.log(giocatorePc);
+// 2. Stabilisco il vincitore
+var esito = "Ha vinto il ";
 
-// Stabilire il vincitore
-
-if (giocatore1 > giocatorePc){
-  document.getElementById("vincitore").innerHTML = "Hai vinto"
-} else if (giocatore1 < giocatorePc){
-  document.getElementById("vincitore").innerHTML = "Hai perso"
+if (numeroUtente > numeroPc){
+  esito += "numeroUtente";
+} else if (numeroUtente < numeroPc){
+  esito += "numeroPc";
 } else {
-  document.getElementById("vincitore").innerHTML = "Pareggio"
+  esito = "Avete pareggiato";
 }
+
+// 3. Stampo numeri
+document.getElementById('numeroUtente').innerHTML ="Il numeroUtente è: " + numeroUtente;
+document.getElementById('numeroPc').innerHTML ="Il numeroPc è: " + numeroPc;
+document.getElementById('esito').innerHTML = esito;
